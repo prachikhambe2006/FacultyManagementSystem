@@ -11,5 +11,16 @@ function showList(list) {
   }
 }
 
-// FEATURE_PLACEHOLDER
+function searchFaculty() {
+  var keyword = document.getElementById("searchName").value.toLowerCase();
+  var result = [];
+
+  for (var i = 0; i < facultyList.length; i++) {
+    if (facultyList[i].toLowerCase().indexOf(keyword) !== -1) {
+      result.push(facultyList[i]);
+    }
+  }
+
+  showList(result);
+}
 // End of file
