@@ -23,4 +23,18 @@ function addFaculty() {
   showList(facultyList);
   document.getElementById("facultyName").value = "";
 }
+
+function searchFaculty() {
+  var keyword = document.getElementById("searchName").value.toLowerCase();
+  var result = [];
+
+  for (var i = 0; i < facultyList.length; i++) {
+    if (facultyList[i].toLowerCase().indexOf(keyword) !== -1) {
+      result.push(facultyList[i]);
+    }
+  }
+
+  showList(result);
+}
+
 // End of file
