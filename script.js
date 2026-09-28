@@ -11,5 +11,16 @@ function showList(list) {
   }
 }
 
-// FEATURE_PLACEHOLDER
+function addFaculty() {
+  var name = document.getElementById("facultyName").value;
+
+  if (name === "") {
+    alert("Please enter faculty name");
+    return;
+  }
+
+  facultyList.push(name);
+  showList(facultyList);
+  document.getElementById("facultyName").value = "";
+}
 // End of file
